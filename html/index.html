@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<title>Choose</title>
+<link rel="stylesheet" type="text/css" href="styles/default.css" media="screen" />
+</head>
+<body class="crazy">
+  <div class="huge">Contacts</div>
+  
+  <ul id="myContacts">
+    <div class='contacts'>
+      <li class='contact'>
+        <a class='LastName' href='#'>Last Name</a>
+        <div class='ratings'>
+          <span class='comment'>Comment</span>
+          <span class='rating'>Vote count</span>
+        </div>
+      </li>
+    </div>
+  </ul>
+  
+  <div id="myform"></div>
+  
+  <script src="scripts/couch.js"></script>
+  <script src="scripts/jquery-1.5.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scripts/pure_min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+  
+  	var db = new CouchDB('reupholster-pure');
+    var docs = db.view("queries/contacts");
+
+    var directive = {
+        '.contacts': {
+            'contact <- rows': {
+                'a.LastName': 'contact.value.LastName',
+                'a.LastName@href': 'contact.value.Url',
+                '.ratings': {
+                  'rating <- contact.value.Ratings': {
+                    'span.comment': 'rating.Comment',
+                    'span.rating': 'rating.Scale'
+                  }
+                }
+            }
+        }
+    };
+
+    $('ul#myContacts').render(docs, directive);
+
+  </script>    
+</body>
+</html>

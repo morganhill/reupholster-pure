@@ -1,0 +1,20 @@
+{
+  "LastName": "Katz",
+  "Address": "2407 Sawyer drive, Charlotte NC",
+  "Type": "contact",
+  "Url": "https://twitter.com/#!/damienkatz",
+  "Ratings": [
+    {
+      "Comment": "Whizz bang idea", 
+      "Scale": 9
+    },
+    {
+      "Comment": "Interesting", 
+      "Scale": 3 
+    },
+    {
+      "Comment": "Could do better",
+      "Scale": 6
+    }
+  ]
+}

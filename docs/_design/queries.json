@@ -1,0 +1,7 @@
+{
+   "views": {
+       "contacts": {
+         "map": "function(doc) {if (doc.Type == 'contact') { emit(doc._id, doc); } }"
+       }
+   }
+}

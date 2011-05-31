@@ -1,0 +1,16 @@
+{
+   "LastName": "Gates",
+   "Address": "123 Fake st., such and such",
+   "Type": "contact",
+   "Url": "https://twitter.com/#!/billgates",
+   "Ratings": [
+    { 
+      "Comment": "Nice stuff", 
+      "Scale": 5
+    },
+    { 
+      "Comment": "Interesting idea", 
+      "Scale": 8
+    }
+  ]
+}
