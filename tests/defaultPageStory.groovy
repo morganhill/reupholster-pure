@@ -5,7 +5,7 @@ scenario "index page", {
     when "we open the index page", {
         go "http://localhost:5984/reupholster-pure/_design/app/index.html"
     }
-    then "jquery runs, and changes text to trailhead", {
+    then "check our header", {
 
         $('div.huge').text().shouldBe "Contacts"
     }
